@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 5 PTN Indonesia🇮🇩</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222; /* Warna latar belakang diubah menjadi gelap */
+            color: #fff; /* Warna teks diubah menjadi putih */
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #333; /* Warna latar belakang kontainer diubah menjadi sedikit lebih gelap */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #fff; /* Warna teks diubah menjadi putih */
+        }
+        ol {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .university {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .university:hover {
+            transform: scale(1.05);
+        }
+        .university img {
+            width: 60px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .university h2 {
+            margin: 0;
+            color: #007bff;
+        }
+        .university-description {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #444; /* Warna latar belakang deskripsi universitas diubah menjadi lebih gelap */
+            border-radius: 5px;
+            opacity: 0; /* Atur opacity menjadi 0 */
+            transition: opacity 0.3s ease; /* Tambahkan transisi opacity */
+        }
+        .university:hover .university-description {
+            display: block;
+            opacity: 1; /* Atur opacity menjadi 1 saat ditampilkan */
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Top 5 PTN Indonesia🇮🇩</h1>
+        <ol>
+            <li class="university" onclick="toggleDescription('ui')">
+                <img src="https://upload.wikimedia.org/wikipedia/id/thumb/0/0f/Makara_of_Universitas_Indonesia.svg/300px-Makara_of_Universitas_Indonesia.svg.png" alt="UI Logo">
+                <h2>Universitas Indonesia</h2>
+                <div class="university-description" id="ui-description">
+                    Universitas Indonesia (UI) adalah universitas negeri tertua di Indonesia. Berlokasi di Depok, Jawa Barat, UI dikenal sebagai salah satu perguruan tinggi terkemuka di Indonesia dan Asia.
+                </div>
+            </li>
+            <li class="university" onclick="toggleDescription('ugm')">
+                <img src="https://upload.wikimedia.org/wikipedia/id/thumb/9/9f/Emblem_of_Universitas_Gadjah_Mada.svg/460px-Emblem_of_Universitas_Gadjah_Mada.svg.png" alt="UGM Logo">
+                <h2>Universitas Gadjah Mada</h2>
+                <div class="university-description" id="ugm-description">
+                    Universitas Gadjah Mada (UGM) merupakan salah satu perguruan tinggi terbaik di Indonesia. Terletak di Yogyakarta, UGM dikenal karena keunggulannya dalam berbagai bidang studi.
+                </div>
+            </li>
+            <li class="university" onclick="toggleDescription('itb')">
+                <img src="https://upload.wikimedia.org/wikipedia/id/thumb/9/95/Logo_Institut_Teknologi_Bandung.png/300px-Logo_Institut_Teknologi_Bandung.png" alt="ITB Logo">
+                <h2>Institut Teknologi Bandung</h2>
+                <div class="university-description" id="itb-description">
+                    Institut Teknologi Bandung (ITB) adalah perguruan tinggi teknik terkemuka di Indonesia. Terletak di Bandung, ITB memiliki reputasi global dalam pendidikan teknik dan ilmu pengetahuan.
+                </div>
+            </li>
+            <li class="university" onclick="toggleDescription('unair')">
+                <img src="https://unair.ac.id/wp-content/uploads/2021/04/Logo-Universitas-Airlangga-UNAIR-768x768.png" alt="UNAIR Logo">
+                <h2>Universitas Airlangga</h2>
+                <div class="university-description" id="unair-description">
+                    Universitas Airlangga (UNAIR) merupakan salah satu universitas terkemuka di Indonesia. Terletak di Surabaya, UNAIR menonjol dalam penelitian dan pendidikan di berbagai disiplin ilmu.
+                </div>
+            </li>
+            <li class="university" onclick="toggleDescription('ipb')">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Bogor_Agricultural_University_%28IPB%29_symbol.svg/440px-Bogor_Agricultural_University_%28IPB%29_symbol.svg.png" alt="IPB Logo">
+                <h2>IPB University</h2>
+                <div class="university-description" id="ipb-description">
+                    IPB University (Institut Pertanian Bogor) adalah universitas terkemuka di Indonesia yang mengkhususkan diri dalam ilmu pertanian dan lingkungan. Berlokasi di Bogor, IPB University memiliki peran penting dalam pengembangan pertanian dan sumber daya alam.
+                </div>
+            </li>
+        </ol>
+    </div>
+    <div class="footer">
+        <p>Top 5 PTN Indonesia by Muhammad Naufal  Sumber:<a href="https://kabar24.bisnis.com/read/20240110/79/1730964/10-ptn-terbaik-di-indonesia-2024-rekomendasi-snbp-dan-snbt-ada-ui-ugm-dan-unhas">kabar24.bisnis.com</a></p>
+    </div>
+    <script>
+        function toggleDescription(id) {
+            var description = document.getElementById(id + "-description");
+            if (description.style.display === "none") {
+                description.style.display = "block
